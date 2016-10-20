@@ -1,0 +1,68 @@
+{
+  "name": "express-kerberos",
+  "version": "0.0.0",
+  "description": "express middleware for simple kerberos authentication",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run lint && babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly --report text --report html -- --compilers js:babel-register test",
+    "lint": "run-p lint-*",
+    "lint-src": "eslint src --fix",
+    "lint-test": "eslint test --fix",
+    "precommit": "lint-staged",
+    "commitmsg": "validate-commit-msg",
+    "babel": "babel src -d lib -s",
+    "build": "rimraf lib && npm run babel",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "prepublish": "npm run build",
+    "posttest": "babel-istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noamokman/express-kerberos.git"
+  },
+  "keywords": [
+    "express",
+    "kerberos",
+    "auth"
+  ],
+  "author": {
+    "name": "Noam Okman",
+    "email": "noamokman@gmail.com",
+    "url": "https://github.com/noamokman"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noamokman/express-kerberos/issues"
+  },
+  "homepage": "https://github.com/noamokman/express-kerberos#readme",
+  "engines": {
+    "node": ">=4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-istanbul": "^0.11.0",
+    "babel-preset-env": "0.0.6",
+    "babel-register": "^6.16.3",
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "eslint-config-noamokman": "^5.0.1",
+    "husky": "^0.11.9",
+    "lint-staged": "^3.2.0",
+    "mocha": "^3.1.2",
+    "mockery": "^2.0.0",
+    "npm-run-all": "^3.1.1",
+    "rimraf": "^2.5.4",
+    "validate-commit-msg": "^2.8.2"
+  },
+  "dependencies": {
+    "composable-middleware": "^0.3.0",
+    "express-auth-negotiate": "^0.2.0",
+    "simple-kerberos": "^1.0.0"
+  }
+}
