@@ -17,7 +17,9 @@ describe('express-kerberos', () => {
   describe('middleware', () => {
     let expressKerberos;
 
-    before(() => {
+    before(function () {
+      this.timeout(5000);
+
       mockery.registerMock('simple-kerberos', token => Promise.resolve(token));
 
       mockery.enable({
