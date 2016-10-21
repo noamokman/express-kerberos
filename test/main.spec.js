@@ -38,12 +38,14 @@ describe('express-kerberos', () => {
     it('should return a middleware', done => {
       const middleware = expressKerberos();
 
-      middleware({
+      const req = {
         get () {
           return 'Negotiate lol';
         }
-      }, null, username => {
-        expect(username).to.equal('lol');
+      };
+
+      middleware(req, null, () => {
+        expect(req.auth.username).to.equal('lol');
         done();
       });
     });
