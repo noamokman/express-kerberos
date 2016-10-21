@@ -1,6 +1,6 @@
 {
   "name": "express-kerberos",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "express middleware for simple kerberos authentication",
   "main": "lib/index.js",
   "scripts": {
