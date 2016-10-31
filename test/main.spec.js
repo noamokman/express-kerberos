@@ -35,7 +35,7 @@ describe('express-kerberos', () => {
       mockery.disable();
     });
 
-    it('should return a middleware', done => {
+    it('should attach the username to the req.auth object', done => {
       const middleware = expressKerberos();
 
       const req = {
