@@ -1,4 +1,4 @@
-# express-kerberos [![Build Status](https://travis-ci.org/noamokman/express-kerberos.svg?branch=master)](https://travis-ci.org/noamokman/express-kerberos) [![Coverage Status](https://coveralls.io/repos/github/noamokman/express-kerberos/badge.svg?branch=master)](https://coveralls.io/github/noamokman/express-kerberos?branch=master)
+# express-kerberos [![Build Status](https://travis-ci.org/noamokman/express-kerberos.svg?branch=master)](https://travis-ci.org/noamokman/express-kerberos) [![Coverage Status](https://coveralls.io/repos/github/noamokman/express-kerberos/badge.svg?branch=master)](https://coveralls.io/github/noamokman/express-kerberos?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/noamokman/express-kerberos.svg)](https://greenkeeper.io/)
 
 express middleware for simple kerberos authentication
 
