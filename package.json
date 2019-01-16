@@ -64,6 +64,6 @@
   "dependencies": {
     "composable-middleware": "^0.3.0",
     "express-auth-negotiate": "^0.2.0",
-    "simple-kerberos": "^1.1.2"
+    "simple-kerberos": "^2.0.0"
   }
 }
