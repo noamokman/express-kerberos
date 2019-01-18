@@ -7,11 +7,24 @@ $ [sudo] npm install express-kerberos
 ```
 
 ## Usage
-```js
-import {add} from 'express-kerberos';
 
-add(1, 2); // 3
+### Example
+``` js
+import express from 'express';
+import expressKerberos from 'express-kerberos';
+
+const app = express();
+
+app.get('/', expressKerberos(), (req, res) => {
+  res.send(`Hello ${req.auth.username}!`);
+});
+
 ```
+
+## Related
+
+- [express-auth-negotiate](https://github.com/omrilitov/express-auth-negotiate) - The underlying express middleware to get the token
+- [simple-kerberos](https://github.com/noamokman/simple-kerberos) - The module used for kerberos authentication
 
 ## License
 
