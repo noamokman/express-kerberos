@@ -67,7 +67,7 @@
     "express-auth-negotiate": "^0.2.0",
     "lodash": "^4.17.11",
     "mockery": "^2.1.0",
-    "simple-kerberos": "^2.0.0"
+    "simple-kerberos": "^3.0.0"
   },
   "module": "src/index.js",
   "jest": {
